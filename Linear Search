@@ -1,0 +1,25 @@
+#include <stdio.h>
+int ls(int n ,int x ,int a[])
+{ int i;
+for(i=0;i<=n;i++)
+{ if(a[i] == x)
+return i;
+}
+return -1;
+}
+
+int main()
+{
+int i,n,x,a[10],result;
+printf("Enter the values of upto n = ");
+scanf("%d",&n);
+for(i=0;i<=n;i++)
+scanf("%d",&a[i]);
+printf("Enter the values of x = ");
+scanf("%d",&x);
+result = ls(n ,x ,a);
+if(result == -1)
+printf("Element not found");
+else
+printf("Element found at index: %d", result);
+}
